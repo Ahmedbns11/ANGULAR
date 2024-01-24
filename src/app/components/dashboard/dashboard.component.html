@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Gérer Maisons d'Hôtes</h2>
+  
+    <button (click)="ajout()" class="action-button" id="ajouterMaison">Ajouter Maison</button>
+  
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Nom</th>
+          <th>Actions</th>
+        </tr>
+        <tr *ngFor="let maison of maisons">
+          <td>{{ maison.nom }}</td>
+          <td>
+            <button (click)="consulterMaison(maison)" class="action-button" id="consulter">Consulter</button>
+            <button (click)="modifierMaison(maison)" class="action-button" id="modifier">Modifier</button>
+            <button (click)="supprimerMaison(maison)" class="action-button" id="supprimer">Supprimer</button>
+            <button (click)="ajouterChambre()" class="action-button" id="ajouterChambre">Ajouter une chambre</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
